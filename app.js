@@ -55,6 +55,7 @@ class Mammal extends Animals{
     }
 }
 class Person {
+    #_username = "Elephant";
     constructor(name) {
         this._name = name;
     }
@@ -68,9 +69,18 @@ class Person {
         }
         this._name = newName;
     }
+    get username() {
+        return this.#_username
+    }
+    set username(newValue){
+        this.#_username = newValue;
+    }
 }
 let Tati = new Person("name");
-console.log(Tati.name);
+console.log(Tati.getname("steven"));
+// Tati.getname = "Steven";
+// console.log(Tati.getname);
+
 
 // const Snake = new Reptile("Python", 2000, "50", 0, ["red", "green"]);
 // Snake.detachableTail = true;
